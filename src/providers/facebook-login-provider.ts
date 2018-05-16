@@ -46,6 +46,8 @@ export class FacebookLoginProvider extends BaseLoginProvider {
     user.email = response.email;
     user.token = response.token;
     user.image = 'https://graph.facebook.com/' + response.id + '/picture?type=normal';
+    user.last_name = response.last_name;
+    user.first_name = response.first_name;
     return user;
   }
 
